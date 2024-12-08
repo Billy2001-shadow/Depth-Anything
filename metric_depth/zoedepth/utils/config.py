@@ -33,10 +33,10 @@ import platform
 
 ROOT = pathlib.Path(__file__).parent.parent.resolve()
 
-HOME_DIR = os.path.expanduser("./data")
+HOME_DIR = os.path.expanduser("~")
 
 COMMON_CONFIG = {
-    "save_dir": os.path.expanduser("./depth_anything_finetune"),
+    "save_dir": os.path.expanduser("~/depth_anything_finetune"),
     "project": "ZoeDepth",
     "tags": '',
     "notes": "",
@@ -98,13 +98,13 @@ DATASETS_CONFIG = {
         "avoid_boundary": False,
         "min_depth": 1e-3,   # originally 0.1
         "max_depth": 10,
-        "data_path": os.path.join(HOME_DIR, "nyu"),
-        "gt_path": os.path.join(HOME_DIR, "nyu"),
+        "data_path": os.path.join(HOME_DIR, "ZoeDepth/sync/"),
+        "gt_path": os.path.join(HOME_DIR, "ZoeDepth/sync/"),
         "filenames_file": "./train_test_inputs/nyudepthv2_train_files_with_gt.txt",
         "input_height": 480,
         "input_width": 640,
-        "data_path_eval": os.path.join(HOME_DIR, "nyu"),
-        "gt_path_eval": os.path.join(HOME_DIR, "nyu"),
+        "data_path_eval": os.path.join(HOME_DIR, "DANet/data/nyu2_test/"),
+        "gt_path_eval": os.path.join(HOME_DIR, "DANet/data/nyu2_test/"),
         "filenames_file_eval": "./train_test_inputs/nyudepthv2_test_files_with_gt.txt",
         "min_depth_eval": 1e-3,
         "max_depth_eval": 10,
